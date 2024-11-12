@@ -16,9 +16,6 @@ jobs:
             - name: Instalar o Poetry via pip
               run: pip install poetry
 
-            - name: Definir ambiente
-              run: poetry env use 3.11.5
-
             - name: Instalar dependências com o Poetry
               run: poetry install
 
