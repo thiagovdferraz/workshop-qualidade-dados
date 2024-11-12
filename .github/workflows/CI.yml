@@ -13,6 +13,9 @@ jobs:
               with:
                 python-version: 3.11.5
 
+            - name: Obter enviroment
+            - run: poetry env use cat .python-version
+            
             - name: Instalar o Poetry via pip
               run: pip install poetry
 
