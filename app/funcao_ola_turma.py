@@ -1,2 +1,2 @@
 def funcao_ola_turma():
-    print('Ola turma!')
+    return 'Ola turma!'
