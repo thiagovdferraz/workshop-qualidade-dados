@@ -1,20 +1,18 @@
-# Welcome to MkDocs
+# Documentacao do projeto
 
 Ola, essa é documentacao do projeto Qualidade de dados.
 
-```mermaid
-flowchart LR
-   A-. text .-> B
-```
+Para desenvolver o desafio de negocio, vamos montar a seguinte ETL.
 
 ```mermaid
----
-title: Order example
----
-erDiagram
-    CUSTOMER ||--o{ ORDER : places
-    ORDER ||--|{ LINE-ITEM : contains
-    CUSTOMER }|..|{ DELIVERY-ADDRESS : uses
+graph TD;
+    A[Configura Variáveis] --> B[Ler o Banco SQL];
+    B --> V[Validação do Schema de Entrada];
+    V -->|Falha| X[Alerta de Erro];
+    V -->|Sucesso| C[Transformar os KPIs];
+    C --> Y[Validação do Schema de Saída];
+    Y -->|Falha| Z[Alerta de Erro];
+    Y -->|Sucesso| D[Salvar no DuckDB];
 ```
 
 For full documentation visit [mkdocs.org](https://www.mkdocs.org).
