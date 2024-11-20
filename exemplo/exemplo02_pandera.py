@@ -8,6 +8,7 @@ df = pd.DataFrame({
     "column3": pd.to_datetime(["2010", "2011", "2012"]),
 })
 schema = pa.infer_schema(df)
+print(schema)
 
 with open("inferred_schema.py", "w") as file:
          file.write(schema.to_script())
