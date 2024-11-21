@@ -1,8 +1,8 @@
-# Documentacao do projeto
+# Workshop 02 - Data Quality
 
-Ola, essa é documentacao do projeto Qualidade de dados.
+Para desenvolver o desafio de negocio, vamos montar a seguinte ETL
 
-Para desenvolver o desafio de negocio, vamos montar a seguinte ETL.
+## Fluxo
 
 ```mermaid
 graph TD;
@@ -15,18 +15,6 @@ graph TD;
     Y -->|Sucesso| D[Salvar no DuckDB];
 ```
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+## Contrato de dados
 
-## Commands
-
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+::: app.schema.ProdutoSchema
